@@ -1,0 +1,84 @@
+.title {
+    text-align: center;
+    margin-bottom: 0.2em;
+    font-family: 'Amatic SC', cursive;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: medium;
+    margin-top: 0;
+  }
+  
+  h1 {
+    font-family: 'Amatic SC', cursive;
+    color: navy;
+    font-size: 54px;
+  }
+  
+  body {
+    line-height: 1.6;
+    font-size: 18px;
+    padding: 0 10px;
+    margin: 60px auto;
+    max-width: 700px;
+  }
+  
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-family: 'Dosis', sans-serif;
+    font-style: italic;
+    color: navy;
+  }
+  
+  h3 {
+    font-size: 24px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    color: navy;
+  }
+  
+  p,
+  li {
+    font-family: 'Dosis', sans-serif;
+  }
+  
+  a:link,
+  a:visited {
+    color: navy;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgb(160, 109, 13);
+  }
+  
+  a:active {
+    color: rgb(52, 124, 11);
+  }
+  
+  code,
+  .code {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    font-size: 100%;
+    border-radius: 3px;
+  }
+  
+  .footer {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    margin-bottom: 0.2em;
+    font-size: 16px;
+    color: navy;
+  }
