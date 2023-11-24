@@ -1,5 +1,5 @@
 body {
-  background-color: #DDF2FD;
+  background-color: white;
 }
 
 .title {
@@ -54,16 +54,16 @@ body {
   
   a:link,
   a:visited {
-    color: #164863;
+    color: #2f6e90;
     text-decoration: none;
   }
   
   a:hover {
-    color: #427D9D;
+    color: #9BBEC8;
   }
   
   a:active {
-    color: #9BBEC8;
+    color: #2f6e90;
   }
   
   code,
@@ -84,5 +84,4 @@ body {
     text-align: center;
     margin-bottom: 0.2em;
     font-size: 16px;
-    color: 164863;
   }
