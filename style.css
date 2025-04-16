@@ -88,3 +88,45 @@ code,
   font-size: 16px;
   color: #A9C4D0;
 }
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2em;
+  padding: 0 1rem;
+}
+
+.nav-menu a {
+  font-family: 'Work Sans', sans-serif;
+  color: #A9C4D0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #F2F2F2;
+}.nav-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2em;
+  padding: 0 1rem;
+}
+
+.nav-menu a {
+  font-family: 'Work Sans', sans-serif;
+  color: #A9C4D0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #F2F2F2;
+}
