@@ -114,6 +114,7 @@ li {
   margin-bottom: 0.8em;
 }
 
+.project-title,
 .book-title {
   font-weight: 600;
   color: #F2F2F2;
