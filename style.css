@@ -1,19 +1,23 @@
+/* Global Reset */
 body {
   background-color: #1F4C5B; /* Deep marine blue */
   color: #F2F2F2;
-  line-height: 1.6;
+  font-family: 'Work Sans', sans-serif;
   font-size: 18px;
+  line-height: 1.6;
   padding: 0 10px;
   margin: 60px auto;
   max-width: 700px;
-  font-family: 'Work Sans', sans-serif;
 }
 
-.title {
+/* Typography */
+.title,
+h1 {
   text-align: center;
-  margin-bottom: 0.2em;
   font-family: 'Cormorant Garamond', serif;
   color: #F2F2F2;
+  font-size: 54px;
+  margin-bottom: 0.2em;
 }
 
 .subtitle {
@@ -21,39 +25,33 @@ body {
   font-size: medium;
   margin-top: 0;
   color: #D3E0E6;
-  font-family: 'Work Sans', sans-serif;
-}
-
-h1 {
-  font-family: 'Cormorant Garamond', serif;
-  color: #F2F2F2;
-  font-size: 54px;
 }
 
 h2,
 h3 {
-  line-height: 1.2;
   font-family: 'Cormorant Garamond', serif;
+  line-height: 1.2;
+  color: #A9C4D0;
 }
 
 h2 {
   font-size: 24px;
   font-style: italic;
-  color: #A9C4D0; /* Accent tone */
 }
 
 h3 {
   font-size: 24px;
   font-weight: 600;
-  color: #A9C4D0;
 }
 
 p,
 li {
   font-family: 'Work Sans', sans-serif;
   color: #D3E0E6;
+  font-size: 1rem;
 }
 
+/* Links */
 a:link,
 a:visited {
   color: #A9C4D0;
@@ -68,27 +66,27 @@ a:active {
   color: #A9C4D0;
 }
 
+/* Code Blocks */
 code,
 .code {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.125rem;
   line-height: 1.6;
+  border-radius: 3px;
   padding: 0;
   margin: 0;
-  font-size: 100%;
-  border-radius: 3px;
-  color: #D3E0E6;
   background-color: #2A5D70;
+  color: #D3E0E6;
 }
 
+/* Footer */
 .footer {
-  font-family: 'Work Sans', sans-serif;
   text-align: center;
-  margin-bottom: 0.2em;
   font-size: 16px;
   color: #A9C4D0;
 }
 
+/* Nav Menu */
 .nav-menu {
   display: flex;
   justify-content: center;
@@ -109,33 +107,11 @@ code,
 
 .nav-menu a:hover {
   color: #F2F2F2;
-}.nav-menu {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2em;
-  padding: 0 1rem;
 }
 
-.nav-menu a {
-  font-family: 'Work Sans', sans-serif;
-  color: #A9C4D0;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.2s ease;
-}
-
-.nav-menu a:hover {
-  color: #F2F2F2;
-}
-
+/* Book List */
 li {
   margin-bottom: 0.8em;
-  font-family: 'Work Sans', sans-serif;
-  color: #D3E0E6;
-  font-size: 1rem;
 }
 
 .book-title {
