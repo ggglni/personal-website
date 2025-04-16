@@ -1,87 +1,89 @@
 body {
-  background-color: white;
+  background-color: #1F4C5B; /* Deep marine blue */
+  color: #F2F2F2;
+  line-height: 1.6;
+  font-size: 18px;
+  padding: 0 10px;
+  margin: 60px auto;
+  max-width: 700px;
 }
 
 .title {
-    text-align: center;
-    margin-bottom: 0.2em;
-    font-family: 'Amatic SC', cursive;
-  }
-  
-  .subtitle {
-    text-align: center;
-    font-size: medium;
-    margin-top: 0;
-  }
-  
-  h1 {
-    font-family: 'Amatic SC', cursive;
-    color: #164863;
-    font-size: 54px;
-  }
-  
-  body {
-    line-height: 1.6;
-    font-size: 18px;
-    padding: 0 10px;
-    margin: 60px auto;
-    max-width: 700px;
-  }
-  
-  h2,
-  h3 {
-    line-height: 1.2;
-  }
-  
-  h2 {
-    font-size: 24px;
-    font-family: 'Dosis', sans-serif;
-    font-style: italic;
-    color: #427D9D;
-  }
-  
-  h3 {
-    font-size: 24px;
-    font-family: 'Dosis', sans-serif;
-    font-weight: bold;
-    color: #427D9D;
-  }
-  
-  p,
-  li {
-    font-family: 'Dosis', sans-serif;
-  }
-  
-  a:link,
-  a:visited {
-    color: #2f6e90;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #9BBEC8;
-  }
-  
-  a:active {
-    color: #2f6e90;
-  }
-  
-  code,
-  .code {
-    font-family: 'Dosis', sans-serif;
-    font-size: 1.125rem;
-    line-height: 1.6;
-    padding: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
-    font-size: 100%;
-    border-radius: 3px;
-  }
-  
-  .footer {
-    font-family: 'Dosis', sans-serif;
-    text-align: center;
-    margin-bottom: 0.2em;
-    font-size: 16px;
-  }
+  text-align: center;
+  margin-bottom: 0.2em;
+  font-family: 'Amatic SC', cursive;
+  color: #F2F2F2;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: medium;
+  margin-top: 0;
+  color: #D3E0E6;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  color: #F2F2F2;
+  font-size: 54px;
+}
+
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 24px;
+  font-family: 'Dosis', sans-serif;
+  font-style: italic;
+  color: #A9C4D0; /* Accent tone */
+}
+
+h3 {
+  font-size: 24px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  color: #A9C4D0;
+}
+
+p,
+li {
+  font-family: 'Dosis', sans-serif;
+  color: #D3E0E6;
+}
+
+a:link,
+a:visited {
+  color: #A9C4D0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F2F2F2;
+}
+
+a:active {
+  color: #A9C4D0;
+}
+
+code,
+.code {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  border-radius: 3px;
+  color: #D3E0E6;
+  background-color: #2A5D70;
+}
+
+.footer {
+  font-family: 'Dosis', sans-serif;
+  text-align: center;
+  margin-bottom: 0.2em;
+  font-size: 16px;
+  color: #A9C4D0;
+}
