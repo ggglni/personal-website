@@ -1,3 +1,7 @@
+/* Import these fonts in your HTML head:
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+*/
+
 body {
   background-color: #1F4C5B; /* Deep marine blue */
   color: #F2F2F2;
@@ -6,12 +10,13 @@ body {
   padding: 0 10px;
   margin: 60px auto;
   max-width: 700px;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .title {
   text-align: center;
   margin-bottom: 0.2em;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Space Grotesk', sans-serif;
   color: #F2F2F2;
 }
 
@@ -20,10 +25,11 @@ body {
   font-size: medium;
   margin-top: 0;
   color: #D3E0E6;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 h1 {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Space Grotesk', sans-serif;
   color: #F2F2F2;
   font-size: 54px;
 }
@@ -31,25 +37,24 @@ h1 {
 h2,
 h3 {
   line-height: 1.2;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 h2 {
   font-size: 24px;
-  font-family: 'Dosis', sans-serif;
   font-style: italic;
   color: #A9C4D0; /* Accent tone */
 }
 
 h3 {
   font-size: 24px;
-  font-family: 'Dosis', sans-serif;
   font-weight: bold;
   color: #A9C4D0;
 }
 
 p,
 li {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   color: #D3E0E6;
 }
 
@@ -69,7 +74,7 @@ a:active {
 
 code,
 .code {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.125rem;
   line-height: 1.6;
   padding: 0;
@@ -81,7 +86,7 @@ code,
 }
 
 .footer {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   text-align: center;
   margin-bottom: 0.2em;
   font-size: 16px;
