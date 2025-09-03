@@ -204,7 +204,9 @@ a.venture-name,
 }
 
 /* Prevent any scrolling on the homepage */
-body.home {
+body.home,
+body.books-page,
+body.ventures-page {
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -245,21 +247,24 @@ html, body { background-color: #1F4C5B; }
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;     /* keep on one line */
-  gap: 0.6rem;
-  margin: 8px 0 12px;    /* small margins to avoid pushing beyond viewport */
-  padding: 8px 0 0;
+  gap: 0.8rem;
+  margin: 20px 0 16px;    /* small margins to avoid pushing beyond viewport */
+  padding: 0;
 }
 
 .nav-menu a {
-  font-size: 0.95rem;    /* compact so 3 items fit on narrow phones */
+  font-size: 1rem;
   font-weight: 500;
-  padding: 0.25rem 0.35rem;
+  padding: 0.25rem 0.4rem;
+  color: #A9C4D0;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 /* Remove any previous rule that stacked nav on mobile */
 @media (max-width: 480px) {
-  .nav-menu { flex-direction: row; }
-  .nav-menu a { max-width: none; }
+  .nav-menu { flex-direction: row; gap: 0.6rem; }
+  .nav-menu a { max-width: none; font-size: 0.95rem; }
 }
 
 /* Footer stays fixed; no extra body padding on home */
