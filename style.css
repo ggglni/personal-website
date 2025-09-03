@@ -229,29 +229,3 @@ a.venture-name,
   text-transform: lowercase;
   letter-spacing: 0.5px;
 }
-
-@media (max-width: 480px) {
-  .home .nav-menu {
-    flex-direction: column;     /* stack vertically */
-    align-items: center;        /* center each item */
-    justify-content: center;
-    gap: 0.9rem;                /* consistent spacing */
-    margin-top: 0.8rem;
-  }
-
-  .home .nav-menu a {
-    font-size: 1.3rem;          /* still prominent on mobile */
-    padding: 0.4rem 0.6rem;     /* larger tap target */
-    width: 100%;
-    max-width: 280px;           /* keeps a tidy column width */
-    text-align: center;
-  }
-}
-
-/* Optional: small phones in landscape */
-@media (max-width: 360px) {
-  .home .nav-menu a {
-    font-size: 1.2rem;
-    max-width: 240px;
-  }
-}
