@@ -29,11 +29,9 @@ h1 {
   color: #D3E0E6;
 }
 
-/* Homepage subtitle (Finance & Software) stays bigger */
-.home #preamble .subtitle {
-  font-size: 1.6rem; /* slightly larger */
-  font-weight: 500;
-}
+/* Keep hero clean: Finance & Software bigger; nav links larger on HP */
+.home #preamble .subtitle { font-size: 1.6rem; font-weight: 500; }
+.home .nav-menu a { font-size: 1.35rem; font-weight: 600; letter-spacing: .5px; }
 
 /* Make the 'You can find me on...' line smaller than Finance & Software */
 .home .subtitle:not(#preamble .subtitle) {
@@ -98,17 +96,18 @@ code,
   color: #D3E0E6;
 }
 
-/* Footer (sticky, always bottom) */
-.footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 12px;       /* breathing room from edge */
-  text-align: center;
-  font-size: 16px;
+/* Sticky footer already defined; just refine footer line + links */
+.footer { position: fixed; left: 0; right: 0; bottom: 12px; text-align: center; font-size: 16px; color: #A9C4D0; z-index: 10; }
+body { padding-bottom: 90px; } /* space so content never collides with footer */
+
+.footer-line { margin: 0; opacity: 0.95; }
+.footer-sep { opacity: 0.6; margin: 0 .35rem; }
+.footer-links a {
   color: #A9C4D0;
-  z-index: 10;
+  text-decoration: none;
+  font-weight: 400;
 }
+.footer-links a:hover { color: #F2F2F2; text-decoration: underline; }
 
 /* Nav Menu */
 .nav-menu {
