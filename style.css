@@ -1,14 +1,13 @@
 /* Global */
 body {
-  background-color: #1F4C5B; /* Deep marine blue */
-  color: #F2F2F2;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  padding: 0 10px;
-  margin: 0 auto;            /* remove large top margin for true vertical centering */
+  /* existing colors, fonts, etc. stay */
+  margin: 0 auto;           /* remove big top margin so centering works */
   max-width: 700px;
-  padding-bottom: 90px;       /* space for sticky footer everywhere */
+  padding: 0 10px;
+  padding-bottom: 90px;     /* space for sticky footer */
+  min-height: 100vh;        /* full viewport height */
+  display: flex;            /* column layout: nav (top) + hero (center) */
+  flex-direction: column;
 }
 
 /* Typography */
@@ -66,17 +65,26 @@ code, .code {
   color: #D3E0E6;
 }
 
-/* Hero: center vertically + horizontally (homepage) */
+/* Hero occupies remaining space and centers its content */
 .home .hero {
+  flex: 1;                          /* take the leftover height under the nav */
   display: flex;
-  min-height: calc(100vh - 140px);  /* leave room for sticky footer + nav */
-  align-items: center;               /* horizontal center in column layout */
-  justify-content: center;           /* vertical center */
+  align-items: center;              /* horizontal center in column layout */
+  justify-content: center;          /* vertical center */
   text-align: center;
-  padding: 20px 0;
+  padding-bottom: 70px;             /* visual offset for the fixed footer */
 }
 
-/* Nav Menu (shared across all pages) */
+/* Bigger subtitle for better balance under the logo */
+.home #preamble .subtitle {
+  font-size: 2rem;                  /* larger than before */
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 0.35rem;
+  color: #D3E0E6;
+}
+
+/* Keep the global nav exactly as on other pages (no size bump on home) */
 .nav-menu {
   display: flex;
   justify-content: center;
@@ -91,7 +99,7 @@ code, .code {
   color: #A9C4D0;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;      /* same size everywhere */
+  font-size: 1rem;
   transition: color 0.2s ease;
 }
 .nav-menu a:hover { color: #F2F2F2; }
@@ -111,9 +119,9 @@ code, .code {
     padding: 0.4rem 0.6rem;
   }
 
-  .home .hero {
-    min-height: calc(100vh - 160px); /* a bit more space for stacked nav + footer */
-  }
+  .home .hero { padding-bottom: 80px; }   /* a touch more room for footer */
+  
+  .home #preamble .subtitle { font-size: 1.7rem; }
 }
 
 /* Sticky footer */
