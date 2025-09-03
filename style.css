@@ -14,6 +14,22 @@ body {
   flex-direction: column;
 }
 
+body.home {
+  /* full viewport and no scrolling */
+  height: 100dvh;              /* dynamic viewport height (mobile-friendly) */
+  min-height: 100dvh;
+  overflow: hidden;
+
+  /* existing layout */
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 700px;
+
+  /* remove extra bottom padding on home (footer is fixed) */
+  padding: 0 10px;
+}
+
 /* Typography */
 .title, h1 {
   text-align: center;
@@ -92,10 +108,11 @@ code, .code {
 .nav-menu {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 18px 1rem 0;
-  margin: 0 0 1.5rem;
+  align-items: center;
+  flex-wrap: nowrap;            /* keep on one line */
+  gap: 0.6rem;                  /* tighter gap so it fits narrow screens */
+  padding: 12px 0 0;
+  margin: 0 0 1.2rem;
 }
 
 .nav-menu a {
@@ -103,15 +120,18 @@ code, .code {
   color: #A9C4D0;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: color 0.2s ease;
+    padding: 0.25rem 0.4rem;
 }
+
 .nav-menu a:hover { color: #F2F2F2; }
 
 /* Mobile nav alignment (stack, center, equal spacing) */
 @media (max-width: 480px) {
+  .nav-menu { flex-direction: row; } /* force row on mobile too */
+  .nav-menu a { max-width: none; text-align: left; }
   .home .hero { padding-bottom: 80px; }   /* a touch more room for footer */
-
   .home #preamble .subtitle { font-size: 1.7rem; }
 }
 
