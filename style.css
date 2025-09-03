@@ -192,3 +192,84 @@ a.venture-name,
   text-transform: lowercase;
   letter-spacing: 0.5px;
 }
+
+/* --- HOMEPAGE: no scroll, full-viewport, horizontal menu --- */
+
+/* Fill the viewport on all browsers (iOS/Android/Desktop) */
+@supports (height: 100svh) {
+  body.home { height: 100svh; min-height: 100svh; }
+}
+@supports not (height: 100svh) {
+  body.home { height: 100vh; min-height: 100vh; }
+}
+
+/* Prevent any scrolling on the homepage */
+body.home {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 0 10px;
+  padding-bottom: 0 !important; /* override global body padding-bottom */
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: auto;
+}
+
+/* Ensure the background always fills */
+html, body { background-color: #1F4C5B; }
+
+/* Hero sits perfectly centered in the remaining space */
+.home .hero {
+  flex: 1;
+  display: flex;
+  align-items: center;   /* horizontal center in column flow */
+  justify-content: center; /* vertical center */
+  text-align: center;
+  padding: 0;            /* remove vertical padding that caused overflow */
+  min-height: 0;         /* avoid flex min-content overflow */
+}
+
+/* Subtitle size (bigger, but won’t push page) */
+.home #preamble .subtitle {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0.35rem 0 0;
+  color: #D3E0E6;
+}
+
+/* Nav: always horizontal, tighter spacing to fit small widths */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;     /* keep on one line */
+  gap: 0.6rem;
+  margin: 8px 0 12px;    /* small margins to avoid pushing beyond viewport */
+  padding: 8px 0 0;
+}
+
+.nav-menu a {
+  font-size: 0.95rem;    /* compact so 3 items fit on narrow phones */
+  font-weight: 500;
+  padding: 0.25rem 0.35rem;
+}
+
+/* Remove any previous rule that stacked nav on mobile */
+@media (max-width: 480px) {
+  .nav-menu { flex-direction: row; }
+  .nav-menu a { max-width: none; }
+}
+
+/* Footer stays fixed; no extra body padding on home */
+.footer {
+  position: fixed;
+  left: 0; right: 0; bottom: 12px;
+  text-align: center;
+  font-size: 16px;
+  color: #A9C4D0;
+  z-index: 10;
+}
+
+
