@@ -146,6 +146,22 @@ li {
   color: #F2F2F2;
 }
 
+.venture-name,
+a.venture-name,
+.venture-name:link,
+.venture-name:visited,
+.venture-name:hover,
+.venture-name:active {
+  color: #F2F2F2 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Optional: show a subtle underline on hover without changing color */
+.venture-name:hover {
+  text-decoration: underline;
+}
+
 .book-meta {
   margin-left: 0.5em;
   font-style: italic;
