@@ -151,6 +151,10 @@ li { margin-bottom: 0.4em; }
   color: #F2F2F2;
 }
 
+.ventures-page .subtitle {
+  margin-bottom: 1.2rem; /* adds breathing room before the bullet list */
+}
+
 /* Ensure venture links stay white & bold in all states */
 .venture-name,
 a.venture-name,
