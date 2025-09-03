@@ -29,15 +29,20 @@ h1 {
   color: #D3E0E6;
 }
 
-/* homepage-only: make "Finance & Software" bigger */
-.home .subtitle {
-  font-size: 1.35rem;       /* bigger than default */
-  line-height: 1.35;
+/* Homepage subtitle (Finance & Software) stays bigger */
+.home #preamble .subtitle {
+  font-size: 1.6rem; /* slightly larger */
+  font-weight: 500;
 }
 
-/* also bump the first subtitle line slightly more (optional) */
-.home #preamble .subtitle {
-  font-size: 1.5rem;
+/* Make the 'You can find me on...' line smaller than Finance & Software */
+.home .subtitle:not(#preamble .subtitle) {
+  font-size: 0.95rem;
+  font-weight: 300;
+  display: block;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: #D3E0E6;
 }
 
 /* Headings */
@@ -128,10 +133,18 @@ code,
   color: #F2F2F2;
 }
 
-/* homepage-only: make the 3 menu items bigger */
+/* Homepage nav links: bigger, bolder, better spaced */
 .home .nav-menu a {
-  font-size: 1.2rem;       /* bigger on HP only */
-  letter-spacing: 0.2px;
+  font-size: 1.35rem;       /* larger on homepage */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.home .nav-menu a:hover {
+  color: #F2F2F2;
+  transform: scale(1.05); /* slight hover feedback */
 }
 
 /* List spacing */
