@@ -81,9 +81,14 @@ code,
 
 /* Footer */
 .footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 12px;       /* breathing room from edge */
   text-align: center;
   font-size: 16px;
   color: #A9C4D0;
+  z-index: 10;
 }
 
 /* Nav Menu */
