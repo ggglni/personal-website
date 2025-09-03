@@ -110,19 +110,6 @@ code, .code {
 
 /* Mobile nav alignment (stack, center, equal spacing) */
 @media (max-width: 480px) {
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .nav-menu a {
-    max-width: 280px;
-    text-align: center;
-    padding: 0.4rem 0.6rem;
-  }
-
   .home .hero { padding-bottom: 80px; }   /* a touch more room for footer */
 
   .home #preamble .subtitle { font-size: 1.7rem; }
