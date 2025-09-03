@@ -1,3 +1,4 @@
+/* Global */
 body {
   background-color: #1F4C5B; /* Deep marine blue */
   color: #F2F2F2;
@@ -5,107 +6,56 @@ body {
   font-size: 18px;
   line-height: 1.6;
   padding: 0 10px;
-  margin: 60px auto;
+  margin: 0 auto;            /* remove large top margin for true vertical centering */
   max-width: 700px;
-
-  /* ensure footer never overlaps content */
-  padding-bottom: 90px; /* space for sticky footer */
+  padding-bottom: 90px;       /* space for sticky footer everywhere */
 }
 
 /* Typography */
-.title,
-h1 {
+.title, h1 {
   text-align: center;
   font-family: 'Cormorant Garamond', serif;
   color: #F2F2F2;
   font-size: 54px;
-  margin-bottom: 0.2em;
+  margin: 0 0 0.2em;
 }
 
 .subtitle {
   text-align: center;
   font-size: medium;
-  margin-top: 0;
+  margin: 0;
   color: #D3E0E6;
 }
 
-/* Keep hero clean: Finance & Software bigger; nav links larger on HP */
-.home #preamble .subtitle { font-size: 1.6rem; font-weight: 500; }
-.home .nav-menu a { font-size: 1.35rem; font-weight: 600; letter-spacing: .5px; }
-
-/* Make the 'You can find me on...' line smaller than Finance & Software */
-.home .subtitle:not(#preamble .subtitle) {
-  font-size: 0.95rem;
-  font-weight: 300;
-  display: block;
-  margin-top: 0.5rem;
-  text-align: center;
-  color: #D3E0E6;
-}
-
-/* Vertically center hero block on desktop */
-.home .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical centering */
-  align-items: center;
-  min-height: calc(100vh - 120px); /* leave space for sticky footer */
-  text-align: center;
-  padding-top: 1rem;
-}
-
-/* Adjust nav spacing within hero */
-.home .nav-menu {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.8rem;
-  margin-top: 1.8rem;
+/* Make Finance & Software bigger on the homepage only */
+.home #preamble .subtitle {
+  font-size: 1.8rem;     /* larger than default */
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 /* Headings */
-h2,
-h3 {
+h2, h3 {
   font-family: 'Cormorant Garamond', serif;
   line-height: 1.2;
   color: #A9C4D0;
 }
+h2 { font-size: 24px; font-style: italic; }
+h3 { font-size: 24px; font-weight: 600; }
 
-h2 {
-  font-size: 24px;
-  font-style: italic;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-p,
-li {
+p, li {
   font-family: 'Work Sans', sans-serif;
   color: #D3E0E6;
   font-size: 1rem;
 }
 
 /* Links */
-a:link,
-a:visited {
-  color: #A9C4D0;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #F2F2F2;
-}
-
-a:active {
-  color: #A9C4D0;
-}
+a:link, a:visited { color: #A9C4D0; text-decoration: none; }
+a:hover { color: #F2F2F2; }
+a:active { color: #A9C4D0; }
 
 /* Code Blocks */
-code,
-.code {
+code, .code {
   font-family: 'Work Sans', sans-serif;
   font-size: 1.125rem;
   line-height: 1.6;
@@ -116,27 +66,24 @@ code,
   color: #D3E0E6;
 }
 
-/* Sticky footer already defined; just refine footer line + links */
-.footer { position: fixed; left: 0; right: 0; bottom: 12px; text-align: center; font-size: 16px; color: #A9C4D0; z-index: 10; }
-body { padding-bottom: 90px; } /* space so content never collides with footer */
-
-.footer-line { margin: 0; opacity: 0.95; }
-.footer-sep { opacity: 0.6; margin: 0 .35rem; }
-.footer-links a {
-  color: #A9C4D0;
-  text-decoration: none;
-  font-weight: 400;
+/* Hero: center vertically + horizontally (homepage) */
+.home .hero {
+  display: flex;
+  min-height: calc(100vh - 140px);  /* leave room for sticky footer + nav */
+  align-items: center;               /* horizontal center in column layout */
+  justify-content: center;           /* vertical center */
+  text-align: center;
+  padding: 20px 0;
 }
-.footer-links a:hover { color: #F2F2F2; text-decoration: underline; }
 
-/* Nav Menu */
+/* Nav Menu (shared across all pages) */
 .nav-menu {
   display: flex;
-  justify-content: center; /* centered */
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;            
-  margin-bottom: 2em;
-  padding: 0 1rem;
+  gap: 1rem;
+  padding: 18px 1rem 0;
+  margin: 0 0 1.5rem;
 }
 
 .nav-menu a {
@@ -144,58 +91,55 @@ body { padding-bottom: 90px; } /* space so content never collides with footer */
   color: #A9C4D0;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1rem;      /* same size everywhere */
   transition: color 0.2s ease;
 }
+.nav-menu a:hover { color: #F2F2F2; }
 
-.nav-menu a:hover {
-  color: #F2F2F2;
-}
-
-/* Homepage nav links: keep big + bold */
-.home .nav-menu a {
-  padding: 0.3rem 0.5rem;
-  transition: color 0.2s ease, transform 0.15s ease;
-}
-
-.home .nav-menu a:hover {
-  color: #F2F2F2;
-}
-
-/* Mobile: stack and center perfectly */
+/* Mobile nav alignment (stack, center, equal spacing) */
 @media (max-width: 480px) {
-  .home .hero {
-    min-height: calc(100vh - 140px); /* allow footer space on mobile */
-    padding-top: 0;
-  }
-
-  .home .nav-menu {
+  .nav-menu {
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
-    margin-top: 1.2rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
 
-  .home .nav-menu a {
-    font-size: 1.4rem;
-    padding: 0.5rem 0.7rem;
+  .nav-menu a {
     max-width: 280px;
     text-align: center;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .home .hero {
+    min-height: calc(100vh - 160px); /* a bit more space for stacked nav + footer */
   }
 }
 
-/* List spacing */
-li {
-  margin-bottom: 0.4em;
+/* Sticky footer */
+.footer {
+  position: fixed;
+  left: 0; right: 0; bottom: 12px;
+  text-align: center;
+  font-size: 16px;
+  color: #A9C4D0;
+  z-index: 10;
 }
+.footer-line { margin: 0; opacity: 0.95; }
+.footer-sep { opacity: 0.6; margin: 0 .35rem; }
+.footer-links a { color: #A9C4D0; text-decoration: none; font-weight: 400; }
+.footer-links a:hover { color: #F2F2F2; text-decoration: underline; }
 
-/* Shared object styles */
-.venture-name,
-.book-title {
+/* Lists */
+li { margin-bottom: 0.4em; }
+
+/* Shared object styles (books + ventures) */
+.venture-name, .book-title {
   font-weight: 600;
   color: #F2F2F2;
 }
 
+/* Ensure venture links stay white & bold in all states */
 .venture-name,
 a.venture-name,
 .venture-name:link,
@@ -206,11 +150,7 @@ a.venture-name,
   font-weight: 600;
   text-decoration: none;
 }
-
-/* Optional: show a subtle underline on hover without changing color */
-.venture-name:hover {
-  text-decoration: underline;
-}
+.venture-name:hover { text-decoration: underline; }
 
 .book-meta {
   margin-left: 0.5em;
