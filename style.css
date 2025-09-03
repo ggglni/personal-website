@@ -1,4 +1,8 @@
-/* Global */
+html, body {
+  background-color: #1F4C5B; /* Deep marine blue */
+  height: 100%;
+}/* Global */
+
 body {
   /* existing colors, fonts, etc. stay */
   margin: 0 auto;           /* remove big top margin so centering works */
@@ -120,7 +124,7 @@ code, .code {
   }
 
   .home .hero { padding-bottom: 80px; }   /* a touch more room for footer */
-  
+
   .home #preamble .subtitle { font-size: 1.7rem; }
 }
 
