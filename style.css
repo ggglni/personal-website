@@ -134,7 +134,7 @@ body { padding-bottom: 90px; } /* space so content never collides with footer */
   display: flex;
   justify-content: center; /* centered */
   flex-wrap: wrap;
-  gap: 1.25rem;            /* a bit more spacing */
+  gap: 1rem;            
   margin-bottom: 2em;
   padding: 0 1rem;
 }
@@ -154,16 +154,12 @@ body { padding-bottom: 90px; } /* space so content never collides with footer */
 
 /* Homepage nav links: keep big + bold */
 .home .nav-menu a {
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
   padding: 0.3rem 0.5rem;
   transition: color 0.2s ease, transform 0.15s ease;
 }
 
 .home .nav-menu a:hover {
   color: #F2F2F2;
-  transform: scale(1.05);
 }
 
 /* Mobile: stack and center perfectly */
