@@ -218,6 +218,12 @@ body.ventures-page {
   -webkit-overflow-scrolling: auto;
 }
 
+body.books-page,
+body.ventures-page {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 /* Ensure the background always fills */
 html, body { background-color: #1F4C5B; }
 
