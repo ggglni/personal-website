@@ -3,82 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="favicon2.ico" type="image/x-icon"/>
-  <title>Ventures</title>
+  <title>Ventures — ggglni</title>
+  <meta name="description" content="Financial technology projects I was and am involved with." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    :root {
+      --bg:    #2a3f5f;
+      --ink:   #e8e6e0;
+      --muted: #7a92aa;
+      --line:  rgba(232,230,224,.1);
+    }
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .95rem;
+      transition: color .15s;
+    }
+
+    nav a:hover { color: var(--ink); }
+    .nav-links { display: flex; gap: 2rem; }
+
+    main {
+      flex: 1;
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 4rem;
+      opacity: 0;
+      animation: fade .5s .05s forwards;
+    }
+
+    @keyframes fade { to { opacity: 1; } }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: -.01em;
+      margin-bottom: 3rem;
+      font-style: italic;
+    }
+
+    .venture {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 1rem;
+      padding: .5rem 0;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--ink);
+      transition: color .15s;
+    }
+
+    .venture:hover { color: var(--muted); }
+
+    .venture-desc {
+      font-size: .9rem;
+      color: var(--muted);
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 1.5rem 2.5rem;
+      color: var(--muted);
+      font-size: .85rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+      nav { padding: 1.5rem; flex-direction: column; gap: 1rem; }
+      main { padding: 3rem 1.5rem; }
+      footer { padding: 1.25rem 1.5rem; }
+      .venture-desc { display: none; }
+    }
+  </style>
 </head>
-<body class="ventures-page">
+<body>
 
-  <!-- Navigation -->
-  <nav class="nav-menu">
-    <a href="/index.html">Home</a>
-    <a href="/ventures.html">Ventures</a>
-    <a href="/books.html">Reads</a>
-    <a href="https://lombardnotes.xyz" target="_blank" rel="noopener">Thoughts</a>
+  <nav>
+    <a href="/">ggglni</a>
+    <div class="nav-links">
+      <a href="/ventures.html">Ventures</a>
+      <a href="/books.html">Reads</a>
+      <a href="https://lombardnotes.xyz" target="_blank">Thoughts</a>
+    </div>
   </nav>
 
-  <!-- Page Content -->
-  <h1 class="title">Ventures</h1>
-  <p class="subtitle">A running list of financial technology projects I was/am involved with:</p>
+  <main>
+    <h1>Ventures.</h1>
 
-  <section>
-  <ul class="ventures-list">
-      <li class="venture-item">
-      <a href="https://telosc.com/" class="venture-name" target="_blank" rel="noopener noreferrer">
-        Telos Consilium</a>
-      <span class="venture-meta"> web3 GTM and pools curator</span>
-      <span class="tag">defi</span>
-    </li>
-    <li class="venture-item">
-      <a href="https://replicats.ai" class="venture-name" target="_blank" rel="noopener noreferrer">
-        Replicats.ai</a>
-      <span class="venture-meta"> AI-driven crypto trading agents</span>
-      <span class="tag">crypto</span>
-    </li>
-    <li class="venture-item">
-      <a href="https://backed.fi" class="venture-name" target="_blank" rel="noopener noreferrer">
-        Backed</a>
-      <span class="venture-meta"> Tokenizing real-world securities on-chain</span>
-      <span class="tag">defi</span>
-      <!-- No scope here, since you covered the full project -->
-    </li>
-    <li class="venture-item">
-      <a href="https://qomodo.me" class="venture-name" target="_blank" rel="noopener noreferrer">
-        Qomodo</a>
-      <span class="venture-meta"> BNPL for physical shops</span>
-      <span class="tag">SME lending</span>
-    </li>
-          <li class="venture-item">
-      <a href="https://fintechpmguild.com" class="venture-name" target="_blank" rel="noopener noreferrer">
-        Fintech Guild</a>
-      <span class="venture-meta"> community of Fintech and DeFi people</span>
-      <span class="tag">fintech</span>
-    </li>  
-    <li class="venture-item">
-      <a href="https://sumup.com" class="venture-name" target="_blank" rel="noopener noreferrer">
-        SumUp Bank</a>
-      <span class="venture-meta"> neobank for SMEs</span>
-      <span class="tag">neobank</span>
-    </li>
-    <li class="venture-item">
-      <a href="https://n26.com" class="venture-name" target="_blank" rel="noopener noreferrer">
-        N26</a>
-      <span class="venture-meta"> neobank for consumers</span>
-      <span class="tag">neobank</span>
-    </li>
-        <li class="venture-item">
-      <a href="https://fundingcircle.co.uk" class="venture-name" target="_blank" rel="noopener noreferrer">
-        Funding Circle</a>
-      <span class="venture-meta"> P2P lender for SMEs</span>
-      <span class="tag">SME lending</span>
-    </li>
-  </ul>
-  </section>
+    <a class="venture" href="https://telosc.com/" target="_blank">
+      <span>Telos Consilium</span>
+      <span class="venture-desc">web3 GTM & pools curator</span>
+    </a>
+    <a class="venture" href="https://replicats.ai" target="_blank">
+      <span>Replicats.ai</span>
+      <span class="venture-desc">AI-driven crypto trading agents</span>
+    </a>
+    <a class="venture" href="https://backed.fi" target="_blank">
+      <span>Backed</span>
+      <span class="venture-desc">tokenizing real-world securities</span>
+    </a>
+    <a class="venture" href="https://qomodo.me" target="_blank">
+      <span>Qomodo</span>
+      <span class="venture-desc">BNPL for physical shops</span>
+    </a>
+    <a class="venture" href="https://fintechpmguild.com" target="_blank">
+      <span>Fintech Guild</span>
+      <span class="venture-desc">community of fintech & DeFi people</span>
+    </a>
+    <a class="venture" href="https://sumup.com" target="_blank">
+      <span>SumUp Bank</span>
+      <span class="venture-desc">neobank for SMEs</span>
+    </a>
+    <a class="venture" href="https://n26.com" target="_blank">
+      <span>N26</span>
+      <span class="venture-desc">neobank for consumers</span>
+    </a>
+    <a class="venture" href="https://fundingcircle.co.uk" target="_blank">
+      <span>Funding Circle</span>
+      <span class="venture-desc">P2P lender for SMEs</span>
+    </a>
+  </main>
+
+  <footer>
+    
+    <span>Built in Italy 🇮🇹</span>
+  </footer>
 
 </body>
 </html>
