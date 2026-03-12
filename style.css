@@ -26,6 +26,16 @@ body.home {
   overflow: hidden;
 }
 
+body.home main {
+  height: calc(100dvh - 4rem);
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 /* ── NAV ── */
 nav {
   padding: 1.5rem 2.5rem;
@@ -56,10 +66,10 @@ nav a:hover { color: var(--ink); }
 /* ── MAIN ── */
 main {
   flex: 1;
-  max-width: 520px;
+  max-width: 560px;
   width: 100%;
   margin: 0 auto;
-  padding: 6rem 2.5rem 2rem;
+  padding: 7rem 2.5rem 3rem;
   opacity: 0;
   animation: fade .5s .05s forwards;
 }
@@ -116,9 +126,11 @@ footer {
 
 /* ── VENTURES ── */
 a.row {
+  display: flex;
   text-decoration: none;
   color: var(--ink);
   transition: color .15s;
+  width: 100%;
 }
 
 a.row:hover { color: var(--muted); }
