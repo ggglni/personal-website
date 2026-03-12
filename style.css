@@ -1,286 +1,159 @@
-html, body {
-  background-color: #1F4C5B; /* Deep marine blue */
-  height: 100%;
-}/* Global */
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── VARIABLES ── */
+:root {
+  --bg:    #2a3f5f;
+  --ink:   #e8e6e0;
+  --muted: #7a92aa;
+  --line:  rgba(232,230,224,.1);
+}
+
+/* ── BASE ── */
 body {
-  /* existing colors, fonts, etc. stay */
-  margin: 0 auto;           /* remove big top margin so centering works */
-  max-width: 700px;
-  padding: 0 10px;
-  padding-bottom: 90px;     /* space for sticky footer */
-  min-height: 100vh;        /* full viewport height */
-  display: flex;            /* column layout: nav (top) + hero (center) */
-  flex-direction: column;
-}
-
-body.home {
-  /* full viewport and no scrolling */
-  height: 100dvh;              /* dynamic viewport height (mobile-friendly) */
-  min-height: 100dvh;
-  overflow: hidden;
-
-  /* existing layout */
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 700px;
-
-  /* remove extra bottom padding on home (footer is fixed) */
-  padding: 0 10px;
-}
-
-/* Typography */
-.title, h1 {
-  text-align: center;
-  font-family: 'Cormorant Garamond', serif;
-  color: #F2F2F2;
-  font-size: 54px;
-  margin: 0 0 0.2em;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: medium;
-  margin: 0;
-  color: #D3E0E6;
-}
-
-/* Make Finance & Software bigger on the homepage only */
-.home #preamble .subtitle {
-  font-size: 1.8rem;     /* larger than default */
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-/* Headings */
-h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
-  line-height: 1.2;
-  color: #A9C4D0;
-}
-h2 { font-size: 24px; font-style: italic; }
-h3 { font-size: 24px; font-weight: 600; }
-
-p, li {
-  font-family: 'Work Sans', sans-serif;
-  color: #D3E0E6;
-  font-size: 1rem;
-}
-
-/* Links */
-a:link, a:visited { color: #A9C4D0; text-decoration: none; }
-a:hover { color: #F2F2F2; }
-a:active { color: #A9C4D0; }
-
-/* Code Blocks */
-code, .code {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.125rem;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.1rem;
   line-height: 1.6;
-  border-radius: 3px;
-  padding: 0;
-  margin: 0;
-  background-color: #2A5D70;
-  color: #D3E0E6;
-}
-
-/* Hero occupies remaining space and centers its content */
-.home .hero {
-  flex: 1;                          /* take the leftover height under the nav */
-  display: flex;
-  align-items: center;              /* horizontal center in column layout */
-  justify-content: center;          /* vertical center */
-  text-align: center;
-  padding-bottom: 70px;             /* visual offset for the fixed footer */
-}
-
-/* Bigger subtitle for better balance under the logo */
-.home #preamble .subtitle {
-  font-size: 2rem;                  /* larger than before */
-  font-weight: 500;
-  line-height: 1.3;
-  margin-top: 0.35rem;
-  color: #D3E0E6;
-}
-
-/* Keep the global nav exactly as on other pages (no size bump on home) */
-.nav-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;            /* keep on one line */
-  gap: 0.6rem;                  /* tighter gap so it fits narrow screens */
-  padding: 12px 0 0;
-  margin: 0 0 1.2rem;
-}
-
-.nav-menu a {
-  font-family: 'Work Sans', sans-serif;
-  color: #A9C4D0;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
-    padding: 0.25rem 0.4rem;
-}
-
-.nav-menu a:hover { color: #F2F2F2; }
-
-/* Mobile nav alignment (stack, center, equal spacing) */
-@media (max-width: 480px) {
-  .nav-menu { flex-direction: row; } /* force row on mobile too */
-  .nav-menu a { max-width: none; text-align: left; }
-  .home .hero { padding-bottom: 80px; }   /* a touch more room for footer */
-  .home #preamble .subtitle { font-size: 1.7rem; }
-}
-
-/* Sticky footer */
-.footer {
-  position: fixed;
-  left: 0; right: 0; bottom: 12px;
-  text-align: center;
-  font-size: 16px;
-  color: #A9C4D0;
-  z-index: 10;
-}
-.footer-line { margin: 0; opacity: 0.95; }
-.footer-sep { opacity: 0.6; margin: 0 .35rem; }
-.footer-links a { color: #A9C4D0; text-decoration: none; font-weight: 400; }
-.footer-links a:hover { color: #F2F2F2; text-decoration: underline; }
-
-/* Lists */
-li { margin-bottom: 0.4em; }
-
-/* Shared object styles (books + ventures) */
-.venture-name, .book-title {
-  font-weight: 600;
-  color: #F2F2F2;
-}
-
-.ventures-page .subtitle {
-  margin-bottom: 1.2rem; /* adds breathing room before the bullet list */
-}
-
-/* Ensure venture links stay white & bold in all states */
-.venture-name,
-a.venture-name,
-.venture-name:link,
-.venture-name:visited,
-.venture-name:hover,
-.venture-name:active {
-  color: #F2F2F2 !important;
-  font-weight: 600;
-  text-decoration: none;
-}
-.venture-name:hover { text-decoration: underline; }
-
-.book-meta {
-  margin-left: 0.5em;
-  font-style: italic;
-  color: #B4D2DB;
-}
-
-.tag {
-  display: inline-block;
-  margin-left: 0.5em;
-  padding: 2px 6px;
-  font-size: 0.75rem;
-  background-color: #2A5D70;
-  color: #D3E0E6;
-  border-radius: 3px;
-  text-transform: lowercase;
-  letter-spacing: 0.5px;
-}
-
-/* --- HOMEPAGE: no scroll, full-viewport, horizontal menu --- */
-
-/* Fill the viewport on all browsers (iOS/Android/Desktop) */
-@supports (height: 100svh) {
-  body.home { height: 100svh; min-height: 100svh; }
-}
-@supports not (height: 100svh) {
-  body.home { height: 100vh; min-height: 100vh; }
-}
-
-/* Prevent any scrolling on the homepage */
-body.home,
-body.books-page,
-body.ventures-page {
-  overflow: hidden;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 700px;
-  padding: 0 10px;
-  padding-bottom: 0 !important; /* override global body padding-bottom */
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: auto;
 }
 
-body.books-page,
-body.ventures-page {
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* Ensure the background always fills */
-html, body { background-color: #1F4C5B; }
-
-/* Hero sits perfectly centered in the remaining space */
-.home .hero {
-  flex: 1;
+/* ── NAV ── */
+nav {
+  padding: 2rem 2.5rem;
   display: flex;
-  align-items: center;   /* horizontal center in column flow */
-  justify-content: center; /* vertical center */
-  text-align: center;
-  padding: 0;            /* remove vertical padding that caused overflow */
-  min-height: 0;         /* avoid flex min-content overflow */
-}
-
-/* Subtitle size (bigger, but won’t push page) */
-.home #preamble .subtitle {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.3;
-  margin: 0.35rem 0 0;
-  color: #D3E0E6;
-}
-
-/* Nav: always horizontal, tighter spacing to fit small widths */
-.nav-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;     /* keep on one line */
-  gap: 0.8rem;
-  margin: 20px 0 16px;    /* small margins to avoid pushing beyond viewport */
-  padding: 0;
-}
-
-.nav-menu a {
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.25rem 0.4rem;
-  color: #A9C4D0;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-/* Remove any previous rule that stacked nav on mobile */
-@media (max-width: 480px) {
-  .nav-menu { flex-direction: row; gap: 0.6rem; }
-  .nav-menu a { max-width: none; font-size: 0.95rem; }
-}
-
-/* Footer stays fixed; no extra body padding on home */
-.footer {
+  justify-content: space-between;
+  align-items: baseline;
   position: fixed;
-  left: 0; right: 0; bottom: 12px;
-  text-align: center;
-  font-size: 16px;
-  color: #A9C4D0;
+  top: 0; left: 0; right: 0;
   z-index: 10;
 }
 
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .95rem;
+  transition: color .15s;
+}
 
+nav a:hover { color: var(--ink); }
+
+.nav-links { display: flex; gap: 2rem; }
+
+/* ── MAIN ── */
+main {
+  flex: 1;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem 4rem;
+  opacity: 0;
+  animation: fade .5s .05s forwards;
+}
+
+@keyframes fade { to { opacity: 1; } }
+
+/* ── HEADINGS ── */
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 1.5rem 2.5rem;
+  color: var(--muted);
+  font-size: .85rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+}
+
+/* ── ROWS (shared by books + ventures) ── */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: .5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.row-right {
+  font-size: .9rem;
+  color: var(--muted);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* ── BOOKS ── */
+.year {
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .5rem;
+  margin-top: 2.5rem;
+}
+
+.year:first-of-type { margin-top: 0; }
+
+/* ── VENTURES ── */
+a.row {
+  text-decoration: none;
+  color: var(--ink);
+  transition: color .15s;
+}
+
+a.row:hover { color: var(--muted); }
+
+/* ── HOMEPAGE ── */
+.quote {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  margin-bottom: .75rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.attribution {
+  font-size: .95rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 2.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .95rem;
+  border-bottom: 1px solid rgba(232,230,224,.2);
+  padding-bottom: 1px;
+  transition: color .15s, border-color .15s;
+}
+
+.links a:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  nav { padding: 1rem 1.5rem; }
+  main { padding: 3rem 1.5rem; }
+  footer { padding: 1.25rem 1.5rem; }
+  .venture-desc { display: none; }
+}

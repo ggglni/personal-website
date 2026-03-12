@@ -7,100 +7,7 @@
   <meta name="description" content="Financial technology projects I was and am involved with." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:    #2a3f5f;
-      --ink:   #e8e6e0;
-      --muted: #7a92aa;
-      --line:  rgba(232,230,224,.1);
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    nav {
-      padding: 2rem 2.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: .95rem;
-      transition: color .15s;
-    }
-
-    nav a:hover { color: var(--ink); }
-    .nav-links { display: flex; gap: 2rem; }
-
-    main {
-      flex: 1;
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 5rem 2.5rem 4rem;
-      opacity: 0;
-      animation: fade .5s .05s forwards;
-    }
-
-    @keyframes fade { to { opacity: 1; } }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: -.01em;
-      margin-bottom: 3rem;
-      font-style: italic;
-    }
-
-    .venture {
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-      gap: 1rem;
-      padding: .5rem 0;
-      border-bottom: 1px solid var(--line);
-      text-decoration: none;
-      color: var(--ink);
-      transition: color .15s;
-    }
-
-    .venture:hover { color: var(--muted); }
-
-    .venture-desc {
-      font-size: .9rem;
-      color: var(--muted);
-      font-style: italic;
-      white-space: nowrap;
-    }
-
-    footer {
-      padding: 1.5rem 2.5rem;
-      color: var(--muted);
-      font-size: .85rem;
-      border-top: 1px solid var(--line);
-      display: flex;
-      justify-content: center;
-    }
-
-    @media (max-width: 480px) {
-      nav { padding: 1.5rem; flex-direction: column; gap: 1rem; }
-      main { padding: 3rem 1.5rem; }
-      footer { padding: 1.25rem 1.5rem; }
-      .venture-desc { display: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -116,42 +23,41 @@
   <main>
     <h1>Ventures.</h1>
 
-    <a class="venture" href="https://telosc.com/" target="_blank">
+    <a class="row" href="https://telosc.com/" target="_blank">
       <span>Telos Consilium</span>
-      <span class="venture-desc">web3 GTM & pools curator</span>
+      <span class="row-right">web3 GTM & pools curator</span>
     </a>
-    <a class="venture" href="https://replicats.ai" target="_blank">
+    <a class="row" href="https://replicats.ai" target="_blank">
       <span>Replicats.ai</span>
-      <span class="venture-desc">AI-driven crypto trading agents</span>
+      <span class="row-right">AI-driven crypto trading agents</span>
     </a>
-    <a class="venture" href="https://backed.fi" target="_blank">
+    <a class="row" href="https://backed.fi" target="_blank">
       <span>Backed</span>
-      <span class="venture-desc">tokenizing real-world securities</span>
+      <span class="row-right">tokenizing real-world securities</span>
     </a>
-    <a class="venture" href="https://qomodo.me" target="_blank">
+    <a class="row" href="https://qomodo.me" target="_blank">
       <span>Qomodo</span>
-      <span class="venture-desc">BNPL for physical shops</span>
+      <span class="row-right">BNPL for physical shops</span>
     </a>
-    <a class="venture" href="https://fintechpmguild.com" target="_blank">
+    <a class="row" href="https://fintechpmguild.com" target="_blank">
       <span>Fintech Guild</span>
-      <span class="venture-desc">community of fintech & DeFi people</span>
+      <span class="row-right">community of fintech & DeFi people</span>
     </a>
-    <a class="venture" href="https://sumup.com" target="_blank">
+    <a class="row" href="https://sumup.com" target="_blank">
       <span>SumUp Bank</span>
-      <span class="venture-desc">neobank for SMEs</span>
+      <span class="row-right">neobank for SMEs</span>
     </a>
-    <a class="venture" href="https://n26.com" target="_blank">
+    <a class="row" href="https://n26.com" target="_blank">
       <span>N26</span>
-      <span class="venture-desc">neobank for consumers</span>
+      <span class="row-right">neobank for consumers</span>
     </a>
-    <a class="venture" href="https://fundingcircle.co.uk" target="_blank">
+    <a class="row" href="https://fundingcircle.co.uk" target="_blank">
       <span>Funding Circle</span>
-      <span class="venture-desc">P2P lender for SMEs</span>
+      <span class="row-right">P2P lender for SMEs</span>
     </a>
   </main>
 
   <footer>
-    
     <span>Built in Italy 🇮🇹</span>
   </footer>
 

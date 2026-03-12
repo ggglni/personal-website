@@ -7,108 +7,7 @@
   <meta name="description" content="A running list of books finished over the years." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:    #2a3f5f;
-      --ink:   #e8e6e0;
-      --muted: #7a92aa;
-      --line:  rgba(232,230,224,.1);
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    nav {
-      padding: 2rem 2.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: .95rem;
-      transition: color .15s;
-    }
-
-    nav a:hover { color: var(--ink); }
-    .nav-links { display: flex; gap: 2rem; }
-
-    main {
-      flex: 1;
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 5rem 2.5rem 4rem;
-      opacity: 0;
-      animation: fade .5s .05s forwards;
-    }
-
-    @keyframes fade { to { opacity: 1; } }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: -.01em;
-      margin-bottom: 3rem;
-      font-style: italic;
-    }
-
-    .year {
-      font-size: .75rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: .5rem;
-      margin-top: 2.5rem;
-    }
-
-    .year:first-of-type { margin-top: 0; }
-
-    .book {
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-      gap: 1rem;
-      padding: .5rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .book-title { flex: 1; }
-
-    .book-author {
-      font-size: .9rem;
-      color: var(--muted);
-      font-style: italic;
-      white-space: nowrap;
-    }
-
-    footer {
-      padding: 1.5rem 2.5rem;
-      color: var(--muted);
-      font-size: .85rem;
-      border-top: 1px solid var(--line);
-      display: flex;
-      justify-content: center;
-    }
-
-    @media (max-width: 480px) {
-      nav { padding: 1.5rem; flex-direction: column; gap: 1rem; }
-      main { padding: 3rem 1.5rem; }
-      footer { padding: 1.25rem 1.5rem; }
-      .venture-desc { display: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -125,42 +24,41 @@
     <h1>Reads.</h1>
 
     <p class="year">2026</p>
-    <div class="book"><span class="book-title">White Noise</span><span class="book-author">Don DeLillo</span></div>
-    <div class="book"><span class="book-title">House of Cards</span><span class="book-author">Michael Dobbs</span></div>
-    <div class="book"><span class="book-title">A Very British Coup</span><span class="book-author">Chris Mullin</span></div>
-    <div class="book"><span class="book-title">Il mago del Cremlino</span><span class="book-author">Giuliano da Empoli</span></div>
-    <div class="book"><span class="book-title">Chokepoints</span><span class="book-author">Edward Fishman</span></div>
-    <div class="book"><span class="book-title">Dictator</span><span class="book-author">Robert Harris</span></div>
-    <div class="book"><span class="book-title">Lustrum</span><span class="book-author">Robert Harris</span></div>
-    <div class="book"><span class="book-title">Nothing Is True and Everything Is Possible</span><span class="book-author">Peter Pomerantsev</span></div>
+    <div class="row"><span>White Noise</span><span class="row-right">Don DeLillo</span></div>
+    <div class="row"><span>House of Cards</span><span class="row-right">Michael Dobbs</span></div>
+    <div class="row"><span>A Very British Coup</span><span class="row-right">Chris Mullin</span></div>
+    <div class="row"><span>Il mago del Cremlino</span><span class="row-right">Giuliano da Empoli</span></div>
+    <div class="row"><span>Chokepoints</span><span class="row-right">Edward Fishman</span></div>
+    <div class="row"><span>Dictator</span><span class="row-right">Robert Harris</span></div>
+    <div class="row"><span>Lustrum</span><span class="row-right">Robert Harris</span></div>
+    <div class="row"><span>Nothing Is True and Everything Is Possible</span><span class="row-right">Peter Pomerantsev</span></div>
 
     <p class="year">2025</p>
-    <div class="book"><span class="book-title">The Murder of Roger Ackroyd</span><span class="book-author">Agatha Christie</span></div>
-    <div class="book"><span class="book-title">The A.B.C. Murders</span><span class="book-author">Agatha Christie</span></div>
-    <div class="book"><span class="book-title">Never Had It So Good</span><span class="book-author">Dominic Sandbrook</span></div>
-    <div class="book"><span class="book-title">How Global Currencies Work</span><span class="book-author">Eichengreen, Mehl, Chitu</span></div>
-    <div class="book"><span class="book-title">Exorbitant Privilege</span><span class="book-author">Barry Eichengreen</span></div>
-    <div class="book"><span class="book-title">Imperium</span><span class="book-author">Robert Harris</span></div>
-    <div class="book"><span class="book-title">Amusing Ourselves to Death</span><span class="book-author">Neil Postman</span></div>
-    <div class="book"><span class="book-title">Propaganda</span><span class="book-author">Edward Bernays</span></div>
-    <div class="book"><span class="book-title">Pax Romana</span><span class="book-author">Jonathan Hickman</span></div>
-    <div class="book"><span class="book-title">Il Dio dei nostri padri</span><span class="book-author">Aldo Cazzullo</span></div>
-    <div class="book"><span class="book-title">Il Pendolo di Foucault</span><span class="book-author">Umberto Eco</span></div>
-    <div class="book"><span class="book-title">Precipice</span><span class="book-author">Robert Harris</span></div>
+    <div class="row"><span>The Murder of Roger Ackroyd</span><span class="row-right">Agatha Christie</span></div>
+    <div class="row"><span>The A.B.C. Murders</span><span class="row-right">Agatha Christie</span></div>
+    <div class="row"><span>Never Had It So Good</span><span class="row-right">Dominic Sandbrook</span></div>
+    <div class="row"><span>How Global Currencies Work</span><span class="row-right">Eichengreen, Mehl, Chitu</span></div>
+    <div class="row"><span>Exorbitant Privilege</span><span class="row-right">Barry Eichengreen</span></div>
+    <div class="row"><span>Imperium</span><span class="row-right">Robert Harris</span></div>
+    <div class="row"><span>Amusing Ourselves to Death</span><span class="row-right">Neil Postman</span></div>
+    <div class="row"><span>Propaganda</span><span class="row-right">Edward Bernays</span></div>
+    <div class="row"><span>Pax Romana</span><span class="row-right">Jonathan Hickman</span></div>
+    <div class="row"><span>Il Dio dei nostri padri</span><span class="row-right">Aldo Cazzullo</span></div>
+    <div class="row"><span>Il Pendolo di Foucault</span><span class="row-right">Umberto Eco</span></div>
+    <div class="row"><span>Precipice</span><span class="row-right">Robert Harris</span></div>
 
     <p class="year">2024</p>
-    <div class="book"><span class="book-title">The End of Alchemy</span><span class="book-author">Mervyn King</span></div>
-    <div class="book"><span class="book-title">Against the Gods</span><span class="book-author">Peter Bernstein</span></div>
-    <div class="book"><span class="book-title">A Piece of the Action</span><span class="book-author">Joe Nocera</span></div>
-    <div class="book"><span class="book-title">Other People's Money</span><span class="book-author">John Kay</span></div>
-    <div class="book"><span class="book-title">The Battle of Bretton Woods</span><span class="book-author">Benn Steil</span></div>
-    <div class="book"><span class="book-title">Bonds Without Borders</span><span class="book-author">Chris O'Malley</span></div>
-    <div class="book"><span class="book-title">Trading & Exchanges</span><span class="book-author">Larry Harris</span></div>
+    <div class="row"><span>The End of Alchemy</span><span class="row-right">Mervyn King</span></div>
+    <div class="row"><span>Against the Gods</span><span class="row-right">Peter Bernstein</span></div>
+    <div class="row"><span>A Piece of the Action</span><span class="row-right">Joe Nocera</span></div>
+    <div class="row"><span>Other People's Money</span><span class="row-right">John Kay</span></div>
+    <div class="row"><span>The Battle of Bretton Woods</span><span class="row-right">Benn Steil</span></div>
+    <div class="row"><span>Bonds Without Borders</span><span class="row-right">Chris O'Malley</span></div>
+    <div class="row"><span>Trading & Exchanges</span><span class="row-right">Larry Harris</span></div>
 
   </main>
 
   <footer>
-    
     <span>Built in Italy 🇮🇹</span>
   </footer>
 
