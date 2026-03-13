@@ -113,6 +113,12 @@ footer {
 }
 
 /* ── BOOKS ── */
+.series {
+  font-size: .8rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-left: .25rem;
+}
 .year {
   font-size: .75rem;
   letter-spacing: .12em;
