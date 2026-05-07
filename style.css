@@ -131,6 +131,17 @@ footer {
 .year:first-of-type { margin-top: 0; }
 
 /* ── VENTURES ── */
+.section-label {
+  font-size: .6rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 2rem;
+  margin-bottom: .25rem;
+}
+
+.section-label:first-of-type { margin-top: 0; }
+
 a.row {
   display: flex;
   text-decoration: none;
